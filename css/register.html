@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 3px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #666666;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+
+<body>
+  <p></p>
+
+  <div class="container">
+    <h1>Corporate Networking Gala 2024</h1>
+    <form action="" method="post" Content-Type="multipart/form-data">
+      <div>
+        <label for="1">Enter your Full Name:</label><br>
+        <input type="text" name="Name" id="1"><br>
+      </div>
+
+      <div>
+        <label for="2">Enter your Phone Number:</label><br>
+        <input type="Number" name="phone" id="2"><br>
+      </div>
+
+      <div>
+        <label for="3">Enter your Email:</label><br>
+        <input type="email" name="Email" id="3"><br>
+      </div>
+
+      <div>
+        <label for="4">Enter your Company Name:</label><br>
+        <input type="text" name="company" id="4"><br>
+      </div>
+
+      <div>
+        <label for="5">Enter your Job Title:</label><br>
+        <input type="text" name="title" id="5"><br>
+      </div>
+
+      <div>
+        <label for="6">Enter your Linkedin profile link or other website link:</label><br>
+        <input type="url" name="link" id="6"><br>
+      </div>
+
+      <div>
+        <label for="7">Select the Event you want to attend(you can maximum participate in two Events):</label><br>
+        <input type="checkbox" name="event" id="7" value="Cybersecurity workshop"><a href="www.google.com">Cybersecurity
+          workshop</a>(1000$)(Hyderbad,Telangana)<br>
+        <input type="checkbox" name="event" id="7" value="Webdev bootcamp"><a href="www.google.com">Webdev
+          bootcamp</a>(800$)(Bangalore,Karnataka)<br>
+        <input type="checkbox" name="event" id="7" value="AI Expert talk"><a href="www.google.com">AI Expert
+          talk</a>(500$)(Delhi)<br>
+        <input type="checkbox" name="event" id="7" value="Debate on AI"><a href="www.google.com">Debate on
+          AI</a>(100$)(Kolkata,West Bengal)<br>
+        <input type="checkbox" name="event" id="7" value="Future of Blockchain talk"><a href="www.google.com">Future of
+          Blockchain talk</a>(600$)(Mumbai,Maharastra)<br>
+        <input type="checkbox" name="event" id="7" value="ML and Datascience talk"><a href="www.google.com">ML and
+          Datascience talk</a>(500$)(Chennai,Tamil Nadu)<br>
+      </div>
+
+      <div>
+        <label for="8">Preferred Session for Event1:</label>
+        <select name="session" id="8">
+          <option value="S1">9:00AM-12:00PM</option>
+          <option value="S2">12:00PM-6:00PM</option>
+          <option value="S3">6:00PM-9:00PM</option>
+        </select><Br>
+      </div>
+
+      <div>
+        <label for="9">Preferred Session for Event2:(If taken):</label>
+        <select name="session" id="9">
+          <option value="S1">9:00AM-12:00PM</option>
+          <option value="S2">12:00PM-6:00PM</option>
+          <option value="S3">6:00PM-9:00PM</option>
+        </select><Br>
+      </div>
+
+      <div>
+        <label for="10">Enter your Dietary Preference:</label>
+        <select name="food" id="10">
+          <option value="Non-Vegetarian">Non-Vegetarian</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Gluten-Free">Gluten-Free</option>
+          <option value="Dairy-Free">Dairy-Free</option>
+        </select><Br>
+      </div>
+
+      <div>
+        <label for="11">Accessibility & Special Requiremnets:</label>
+        <select name="access1" id="11">
+          <option value=" wheelchair"> wheelchair</option>
+          <option value="sign language interpreter">sign language interpreter</option>
+        </select><Br>
+      </div>
+
+      <div>
+        <label for="12">Accessibility & Special Requiremnets:(if others)</label><br>
+        <input type="text" name="access" id="12"><br>
+      </div>
+
+      <div>
+        <label for="13">Ticket Type:</label><br>
+        <input type="radio" name="ticket" id="13" value="VIP">VIP
+        <input type="radio" name="ticket" id="13" value="General">General<br>
+      </div>
+
+      <div>
+        <label for="14">Ticket Type:(if two events are taken)</label><br>
+        <input type="radio" name="ticket1" id="14" value="VIP">VIP
+        <input type="radio" name="ticket1" id="14" value="General">General<br>
+      </div>
+
+      <div>
+        <p>For 50% off use the promo code "Network_Gala"</p>
+        <p>Payment QR</p>
+        <img src="/images/qr.png" width="100px" height="100px">
+      </div>
+
+      <div>
+        <label for="15">Upload the payment screenshot</label><br>
+        <input type="file" accept="image/*" name="File" id="15"><br>
+      </div>
+
+      <div>
+        <label for="16">Enter the Transaction ID</label><br>
+        <input type="text" name="ID" id="16"><br>
+      </div>
+
+      <div>
+        <label for="17">How did you hear about this event?:</label>
+        <select name="marketing" id="17">
+          <option value="Instagram">Instagram</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="Article">Article</option>
+          <option value="Advertisment">Advertisment</option>
+        </select><Br>
+      </div>
+
+      <div>
+        <label for="18">Enter your Suggestion/comments:</label><br>
+        <textarea id="18" name="comment"></textarea><br>
+      </div>
+
+      <input type="submit" value="submit">
+
+    </form>
+  </div>
+  <p></p>
+</body>
+
+</html>
