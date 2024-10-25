@@ -1,96 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .operator{
+        .operator {
             background-color: rgb(194, 193, 193);
-            width:100px;
-            height:500px;
-            display:flex;
+            width: 100px;
+            height: 500px;
+            display: flex;
             flex-direction: column;
             align-items: center;
-            margin:10px;
-        }
-        .operator p{
-            background-color: rgb(67, 67, 67);
-            width:80px;
-            height:80px;
             margin: 10px;
-            margin-bottom:35px;
+        }
+
+        .operator p {
+            background-color: rgb(67, 67, 67);
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            margin-bottom: 35px;
             font-size: 50px;
             color: white;
             text-align: center;
             border-radius: 10px;
         }
-        .number{
+
+        .number {
             background-color: rgb(194, 193, 193);
-            width:300px;
-            height:500px;
-            display:grid;
-            grid-template-columns: repeat(3,1fr);
-            margin:10px;
+            width: 300px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 10px;
         }
-        .number p{
+
+        .number p {
             background-color: rgb(67, 67, 67);
-            width:80px;
-            height:80px;
-            margin:10px;
+            width: 80px;
+            height: 80px;
+            margin: 10px;
             font-size: 50px;
             color: white;
             text-align: center;
             border-radius: 10px;
             cursor: pointer;
         }
-        .keyboard{
+
+        .keyboard {
             display: flex;
             flex-direction: row;
         }
-        .options{
-            display:flex;
+
+        .options {
+            display: flex;
             flex-direction: row;
-            background-color:rgb(194, 193, 193) ;
-            width:420px;
+            background-color: rgb(194, 193, 193);
+            width: 420px;
             margin: 10px;
             align-items: center;
             justify-content: center;
-            
+
         }
-        .options p{
+
+        .options p {
             background-color: rgb(67, 67, 67);
-            width:80px;
-            height:80px;
-            margin:10px 30px;
+            width: 80px;
+            height: 80px;
+            margin: 10px 30px;
             font-size: 40px;
             color: white;
             text-align: center;
             border-radius: 10px;
             cursor: pointer;
         }
-        .options img{
-            width:80px;
-            height:80px;
+
+        .options img {
+            width: 80px;
+            height: 80px;
         }
-        .display p{
-            width:420px;
-            height:300px;
-            background-color:rgb(85, 84, 84) ;
+
+        .display p {
+            width: 420px;
+            height: 300px;
+            background-color: rgb(85, 84, 84);
             margin: 30px 10px;
             border-radius: 10px;
             font-size: 40px;
-            color:#e7e7e7;
+            color: #e7e7e7;
             cursor: pointer;
         }
-        .calculator{
+
+        .calculator {
             background-color: black;
             width: 440px;
-            padding:10px;
+            padding: 10px;
             border-radius: 10px;
         }
     </style>
 </head>
+
 <body>
     <div class="calculator">
         <div class="display">
@@ -123,6 +134,159 @@
             </div>
         </div>
     </div>
-    <script src="myscript.js"></script>
+    <script>
+        //number
+
+        var item = document.getElementById("n1");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 1;
+        }
+
+        var item = document.getElementById("n2");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 2;
+        }
+
+        var item = document.getElementById("n3");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 3;
+        }
+
+        var item = document.getElementById("n4");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 4;
+        }
+
+        var item = document.getElementById("n5");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 5;
+        }
+
+        var item = document.getElementById("n6");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 6;
+        }
+
+        var item = document.getElementById("n7");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 7;
+        }
+
+        var item = document.getElementById("n8");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 8;
+        }
+
+        var item = document.getElementById("n9");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 9;
+        }
+
+        var item = document.getElementById("n0");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += 0;
+        }
+
+        var item = document.getElementById("n.");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML += ".";
+        }
+
+        //operator
+
+        var o1 = false;
+        var o2 = false;
+        var o3 = false;
+        var o4 = false;
+
+        var item = document.getElementById("o1");
+        item.onclick = function () {
+            if (o1) {
+                alert("you cannot use operators consecutively")
+            } else {
+                document.querySelector(".display p").innerHTML += "+";
+                o1 = true;
+            }
+        }
+
+        var item = document.getElementById("o2");
+        item.onclick = function () {
+            if (o2) {
+                alert("you cannot use operators consecutively")
+            } else {
+                document.querySelector(".display p").innerHTML += "-";
+                o2 = true;
+            }
+        }
+
+        var item = document.getElementById("o3");
+        item.onclick = function () {
+            if (o3) {
+                alert("you cannot use operators consecutively")
+            } else {
+                document.querySelector(".display p").innerHTML += "*";
+                o3 = true;
+            }
+        }
+
+        var item = document.getElementById("o4");
+        item.onclick = function () {
+            if (o4) {
+                alert("you cannot use operators consecutively")
+            } else {
+                document.querySelector(".display p").innerHTML += "/";
+                o4 = true;
+            }
+        }
+
+        //options
+
+        var item = document.getElementById("ac");
+        item.onclick = function () {
+            document.querySelector(".display p").innerHTML = "";
+            location.reload();
+        }
+
+        var bulb = false;
+        var col = document.querySelector(".display p");
+
+        var item = document.getElementById("bulb");
+        item.onclick = function () {
+            if (bulb) {
+                document.querySelector(".options p").innerHTML = '<img src="/images/bulb.png" alt="bulb"></img>';
+                bulb = false;
+                col.style.backgroundColor = '#555454';
+                col.style.color = "#e7e7e7";
+            }
+            else {
+                document.querySelector(".options p").innerHTML = '<img src="/images/idea.png" alt="bulb"></img>';
+                bulb = true;
+                col.style.backgroundColor = '#D3D3D3';
+                col.style.color = "#2d2c2c";
+            }
+        }
+
+        var item = document.getElementById("equal");
+        item.onclick = function () {
+            var value = document.querySelector(".display p").innerHTML;
+            var val = String(value)
+            if (value.trim() !== "") {
+                try {
+                    console.log(value)
+                    result = eval(val);
+                    document.querySelector(".display p").innerHTML = result;
+                }
+                catch (e) {
+                    console.log(e)
+                }
+            }
+            else {
+                console.log('no expression')
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>
