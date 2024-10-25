@@ -1,0 +1,13 @@
+# npm init -y
+# npm install express jsonwebtoken dotenv
+# node server1.js
+# post - http://localhost:3000/login - 
+# (body)
+# {
+#     "username": "CBIT"
+# }
+# node server2.js
+# get - http://localhost:4000/posts -
+# (header)
+# Authorization  Bearer (token)
+
